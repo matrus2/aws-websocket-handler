@@ -1,7 +1,7 @@
 {
   "name": "aws-websocket-handler",
   "version": "1.0.0",
-  "description": "",
+  "description": "This module is created to handle AWS Lambda websocket actions as a one default handler",
   "main": "dist/index.js",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.66",
@@ -20,11 +20,26 @@
   "dependencies": {},
   "scripts": {
     "build": "node_modules/.bin/tsc",
-    "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive test/*.ts"
+    "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive test/*.ts",
+    "publish:patch": "npm run build && npm version patch && npm publish",
+    "publish:minor": "npm run build && npm version minor && npm publish",
+    "publish:major": "npm run build && npm version major && npm publish"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matrus2/aws-websocket-handler.git"
+  },
+  "keywords": [
+    "AWS",
+    "Lambda",
+    "Websocket",
+    "API Gateway"
+  ],
+  "author": "Bogusz Przybyslawski <biuro@matrus.pl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matrus2/aws-websocket-handler.git"
+  },
   "nyc": {
     "extension": [
       ".ts"
