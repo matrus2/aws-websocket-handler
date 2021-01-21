@@ -1,6 +1,6 @@
 {
   "name": "aws-websocket-handler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This module is created to handle AWS Lambda websocket actions as a one default handler",
   "main": "dist/index.js",
   "devDependencies": {
